@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employee List</title>
+    <link rel="stylesheet" href="{% static 'employees/style.css' %}">
+</head>
+
+<body>
+    <h1>Employee List</h1>
+    <a href="{% url 'employee_create' %}">+ Add Employee</a>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+        {% for emp in employees %}
+        <tr>
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.email }}</td>
+            <td>{{ emp.position }}</td>
+            <td>{{ emp.salary }}</td>
+            <td>
+                <a href="{% url 'employee_update' emp.pk %}">Edit</a> |
+                <a href="{% url 'employee_delete' emp.pk %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

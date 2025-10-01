@@ -1,3 +1,13 @@
+Student Name - Alamgir Mochhakarim Mulla
+
+Project Name - Simple Employee CRUD Project
+
+Technology Used - HTML, CSS, Python, Djanjo, MySQL
+
+GitHub Link - https://github.com/alam-2002/Anudip-D1378-WEPP 
+
+ // ---------------------------------------------------------------- //
+
 STEP 1 - 
 cd employee_crud
 
